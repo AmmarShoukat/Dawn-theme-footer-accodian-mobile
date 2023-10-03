@@ -1,0 +1,43 @@
+<style>
+@media screen and (max-width: 749px) {
+  .grid .footer-block.grid__item {
+    margin: 0;
+  }
+  .grid .footer-block__heading {
+    position: relative;
+    margin: 0;
+    padding: 1.5rem 0;
+    cursor: pointer;
+  }
+  .grid .footer-block__heading::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    text-align: center;
+  }
+  .grid .footer-block__heading:not(.block-collapsed)::after {
+    content: "-";
+  }
+  .grid .footer-block__heading.block-collapsed + .footer-block__details-content {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    transition: all .2s ease-out;
+    overflow: hidden;
+  }
+  .grid .footer-block__heading + .footer-block__details-content {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    transition: all .2s ease-out;
+    overflow: hidden;
+    margin-bottom: 3rem;
+  }
+
+}
+</style>
